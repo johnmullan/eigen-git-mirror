@@ -153,10 +153,10 @@ EIGEN_BLAS_TRMV_CM(dcomplex, MKL_Complex16, cd, z,)
 EIGEN_BLAS_TRMV_CM(float,    float,  f,  s,)
 EIGEN_BLAS_TRMV_CM(scomplex, MKL_Complex8,  cf, c,)
 #else
-EIGEN_BLAS_TRMV_CM(double,   double, d,  d, _)
-EIGEN_BLAS_TRMV_CM(dcomplex, double, cd, z, _)
-EIGEN_BLAS_TRMV_CM(float,    float,  f,  s, _)
-EIGEN_BLAS_TRMV_CM(scomplex, float,  cf, c, _)
+EIGEN_BLAS_TRMV_CM(double,   double, d,  itsme_d, )
+EIGEN_BLAS_TRMV_CM(dcomplex, double, cd, itsme_z, )
+EIGEN_BLAS_TRMV_CM(float,    float,  f,  itsme_s, )
+EIGEN_BLAS_TRMV_CM(scomplex, float,  cf, itsme_c, )
 #endif
 
 // implements row-major: res += alpha * op(triangular) * vector
@@ -242,10 +242,10 @@ EIGEN_BLAS_TRMV_RM(dcomplex, MKL_Complex16, cd, z,)
 EIGEN_BLAS_TRMV_RM(float,    float,  f,  s,)
 EIGEN_BLAS_TRMV_RM(scomplex, MKL_Complex8,  cf, c,)
 #else
-EIGEN_BLAS_TRMV_RM(double,   double, d,  d,_)
-EIGEN_BLAS_TRMV_RM(dcomplex, double, cd, z,_)
-EIGEN_BLAS_TRMV_RM(float,    float,  f,  s,_)
-EIGEN_BLAS_TRMV_RM(scomplex, float,  cf, c,_)
+EIGEN_BLAS_TRMV_RM(double,   double, d,  itsme_d,)
+EIGEN_BLAS_TRMV_RM(dcomplex, double, cd, itsme_z,)
+EIGEN_BLAS_TRMV_RM(float,    float,  f,  itsme_s,)
+EIGEN_BLAS_TRMV_RM(scomplex, float,  cf, itsme_c,)
 #endif
 
 } // end namespase internal

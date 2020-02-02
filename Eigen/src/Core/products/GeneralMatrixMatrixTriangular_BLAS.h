@@ -129,8 +129,8 @@ struct general_matrix_matrix_rankupdate<Index,EIGTYPE,AStorageOrder,ConjugateA,C
 EIGEN_BLAS_RANKUPDATE_R(double, double, dsyrk)
 EIGEN_BLAS_RANKUPDATE_R(float,  float,  ssyrk)
 #else
-EIGEN_BLAS_RANKUPDATE_R(double, double, dsyrk_)
-EIGEN_BLAS_RANKUPDATE_R(float,  float,  ssyrk_)
+EIGEN_BLAS_RANKUPDATE_R(double, double, itsme_dsyrk)
+EIGEN_BLAS_RANKUPDATE_R(float,  float,  itsme_ssyrk)
 #endif
 
 // TODO hanlde complex cases

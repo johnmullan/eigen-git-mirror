@@ -105,10 +105,10 @@ EIGEN_BLAS_SYMV_SPECIALIZATION(float,    float,  ssymv)
 EIGEN_BLAS_SYMV_SPECIALIZATION(dcomplex, MKL_Complex16, zhemv)
 EIGEN_BLAS_SYMV_SPECIALIZATION(scomplex, MKL_Complex8,  chemv)
 #else
-EIGEN_BLAS_SYMV_SPECIALIZATION(double,   double, dsymv_)
-EIGEN_BLAS_SYMV_SPECIALIZATION(float,    float,  ssymv_)
-EIGEN_BLAS_SYMV_SPECIALIZATION(dcomplex, double, zhemv_)
-EIGEN_BLAS_SYMV_SPECIALIZATION(scomplex, float,  chemv_)
+EIGEN_BLAS_SYMV_SPECIALIZATION(double,   double, itsme_dsymv)
+EIGEN_BLAS_SYMV_SPECIALIZATION(float,    float,  itsme_ssymv)
+EIGEN_BLAS_SYMV_SPECIALIZATION(dcomplex, double, itsme_zhemv)
+EIGEN_BLAS_SYMV_SPECIALIZATION(scomplex, float,  itsme_chemv)
 #endif
 
 } // end namespace internal

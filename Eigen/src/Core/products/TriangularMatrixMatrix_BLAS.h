@@ -186,10 +186,10 @@ EIGEN_BLAS_TRMM_L(dcomplex, MKL_Complex16, cd, ztrmm)
 EIGEN_BLAS_TRMM_L(float, float, f, strmm)
 EIGEN_BLAS_TRMM_L(scomplex, MKL_Complex8, cf, ctrmm)
 #else
-EIGEN_BLAS_TRMM_L(double, double, d, dtrmm_)
-EIGEN_BLAS_TRMM_L(dcomplex, double, cd, ztrmm_)
-EIGEN_BLAS_TRMM_L(float, float, f, strmm_)
-EIGEN_BLAS_TRMM_L(scomplex, float, cf, ctrmm_)
+EIGEN_BLAS_TRMM_L(double, double, d, itsme_dtrmm)
+EIGEN_BLAS_TRMM_L(dcomplex, double, cd, itsme_ztrmm)
+EIGEN_BLAS_TRMM_L(float, float, f, itsme_strmm)
+EIGEN_BLAS_TRMM_L(scomplex, float, cf, itsme_ctrmm)
 #endif
 
 // implements col-major += alpha * op(general) * op(triangular)
@@ -303,10 +303,10 @@ EIGEN_BLAS_TRMM_R(dcomplex, MKL_Complex16, cd, ztrmm)
 EIGEN_BLAS_TRMM_R(float, float, f, strmm)
 EIGEN_BLAS_TRMM_R(scomplex, MKL_Complex8, cf, ctrmm)
 #else
-EIGEN_BLAS_TRMM_R(double, double, d, dtrmm_)
-EIGEN_BLAS_TRMM_R(dcomplex, double, cd, ztrmm_)
-EIGEN_BLAS_TRMM_R(float, float, f, strmm_)
-EIGEN_BLAS_TRMM_R(scomplex, float, cf, ctrmm_)
+EIGEN_BLAS_TRMM_R(double, double, d, itsme_dtrmm)
+EIGEN_BLAS_TRMM_R(dcomplex, double, cd, itsme_ztrmm)
+EIGEN_BLAS_TRMM_R(float, float, f, itsme_strmm)
+EIGEN_BLAS_TRMM_R(scomplex, float, cf, itsme_ctrmm)
 #endif
 } // end namespace internal
 

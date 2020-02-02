@@ -90,10 +90,10 @@ EIGEN_BLAS_TRSM_L(dcomplex, MKL_Complex16, ztrsm)
 EIGEN_BLAS_TRSM_L(float,    float,  strsm)
 EIGEN_BLAS_TRSM_L(scomplex, MKL_Complex8, ctrsm)
 #else
-EIGEN_BLAS_TRSM_L(double,   double, dtrsm_)
-EIGEN_BLAS_TRSM_L(dcomplex, double, ztrsm_)
-EIGEN_BLAS_TRSM_L(float,    float,  strsm_)
-EIGEN_BLAS_TRSM_L(scomplex, float,  ctrsm_)
+EIGEN_BLAS_TRSM_L(double,   double, itsme_dtrsm)
+EIGEN_BLAS_TRSM_L(dcomplex, double, itsme_ztrsm)
+EIGEN_BLAS_TRSM_L(float,    float,  itsme_strsm)
+EIGEN_BLAS_TRSM_L(scomplex, float,  itsme_ctrsm)
 #endif
 
 // implements RightSide general * op(triangular)^-1
@@ -150,10 +150,10 @@ EIGEN_BLAS_TRSM_R(dcomplex, MKL_Complex16, ztrsm)
 EIGEN_BLAS_TRSM_R(float,    float,  strsm)
 EIGEN_BLAS_TRSM_R(scomplex, MKL_Complex8,  ctrsm)
 #else
-EIGEN_BLAS_TRSM_R(double,   double, dtrsm_)
-EIGEN_BLAS_TRSM_R(dcomplex, double, ztrsm_)
-EIGEN_BLAS_TRSM_R(float,    float,  strsm_)
-EIGEN_BLAS_TRSM_R(scomplex, float,  ctrsm_)
+EIGEN_BLAS_TRSM_R(double,   double, itsme_dtrsm)
+EIGEN_BLAS_TRSM_R(dcomplex, double, itsme_ztrsm)
+EIGEN_BLAS_TRSM_R(float,    float,  itsme_strsm)
+EIGEN_BLAS_TRSM_R(scomplex, float,  itsme_ctrsm)
 #endif
 
 } // end namespace internal

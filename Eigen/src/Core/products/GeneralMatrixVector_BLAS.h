@@ -123,10 +123,10 @@ EIGEN_BLAS_GEMV_SPECIALIZATION(float,    float,  sgemv)
 EIGEN_BLAS_GEMV_SPECIALIZATION(dcomplex, MKL_Complex16, zgemv)
 EIGEN_BLAS_GEMV_SPECIALIZATION(scomplex, MKL_Complex8 , cgemv)
 #else
-EIGEN_BLAS_GEMV_SPECIALIZATION(double,   double, dgemv_)
-EIGEN_BLAS_GEMV_SPECIALIZATION(float,    float,  sgemv_)
-EIGEN_BLAS_GEMV_SPECIALIZATION(dcomplex, double, zgemv_)
-EIGEN_BLAS_GEMV_SPECIALIZATION(scomplex, float,  cgemv_)
+EIGEN_BLAS_GEMV_SPECIALIZATION(double,   double, itsme_dgemv)
+EIGEN_BLAS_GEMV_SPECIALIZATION(float,    float,  itsme_sgemv)
+EIGEN_BLAS_GEMV_SPECIALIZATION(dcomplex, double, itsme_zgemv)
+EIGEN_BLAS_GEMV_SPECIALIZATION(scomplex, float,  itsme_cgemv)
 #endif
 
 } // end namespase internal

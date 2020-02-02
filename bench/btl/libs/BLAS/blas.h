@@ -1,7 +1,7 @@
 #ifndef BLAS_H
 #define BLAS_H
 
-#define BLASFUNC(FUNC) FUNC##_
+#define BLASFUNC(FUNC) itsme_##FUNC
 
 #ifdef __WIN64__
 typedef long long BLASLONG;

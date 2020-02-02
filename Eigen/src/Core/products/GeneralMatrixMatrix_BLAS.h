@@ -109,10 +109,10 @@ GEMM_SPECIALIZATION(float,    f,  float,  sgemm)
 GEMM_SPECIALIZATION(dcomplex, cd, MKL_Complex16, zgemm)
 GEMM_SPECIALIZATION(scomplex, cf, MKL_Complex8,  cgemm)
 #else
-GEMM_SPECIALIZATION(double,   d,  double, dgemm_)
-GEMM_SPECIALIZATION(float,    f,  float,  sgemm_)
-GEMM_SPECIALIZATION(dcomplex, cd, double, zgemm_)
-GEMM_SPECIALIZATION(scomplex, cf, float,  cgemm_)
+GEMM_SPECIALIZATION(double,   d,  double, itsme_dgemm)
+GEMM_SPECIALIZATION(float,    f,  float,  itsme_sgemm)
+GEMM_SPECIALIZATION(dcomplex, cd, double, itsme_zgemm)
+GEMM_SPECIALIZATION(scomplex, cf, float,  itsme_cgemm)
 #endif
 
 } // end namespase internal

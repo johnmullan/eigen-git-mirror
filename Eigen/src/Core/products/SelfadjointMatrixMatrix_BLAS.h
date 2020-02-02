@@ -155,10 +155,10 @@ EIGEN_BLAS_SYMM_L(float, float, f, ssymm)
 EIGEN_BLAS_HEMM_L(dcomplex, MKL_Complex16, cd, zhemm)
 EIGEN_BLAS_HEMM_L(scomplex, MKL_Complex8, cf, chemm)
 #else
-EIGEN_BLAS_SYMM_L(double, double, d, dsymm_)
-EIGEN_BLAS_SYMM_L(float, float, f, ssymm_)
-EIGEN_BLAS_HEMM_L(dcomplex, double, cd, zhemm_)
-EIGEN_BLAS_HEMM_L(scomplex, float, cf, chemm_)
+EIGEN_BLAS_SYMM_L(double, double, d, itsme_dsymm)
+EIGEN_BLAS_SYMM_L(float, float, f, itsme_ssymm)
+EIGEN_BLAS_HEMM_L(dcomplex, double, cd, itsme_zhemm)
+EIGEN_BLAS_HEMM_L(scomplex, float, cf, itsme_chemm)
 #endif
 
 /* Optimized matrix * selfadjoint matrix (?SYMM/?HEMM) product */
@@ -275,10 +275,10 @@ EIGEN_BLAS_SYMM_R(float, float, f, ssymm)
 EIGEN_BLAS_HEMM_R(dcomplex, MKL_Complex16, cd, zhemm)
 EIGEN_BLAS_HEMM_R(scomplex, MKL_Complex8, cf, chemm)
 #else
-EIGEN_BLAS_SYMM_R(double, double, d, dsymm_)
-EIGEN_BLAS_SYMM_R(float, float, f, ssymm_)
-EIGEN_BLAS_HEMM_R(dcomplex, double, cd, zhemm_)
-EIGEN_BLAS_HEMM_R(scomplex, float, cf, chemm_)
+EIGEN_BLAS_SYMM_R(double, double, d, itsme_dsymm)
+EIGEN_BLAS_SYMM_R(float, float, f, itsme_ssymm)
+EIGEN_BLAS_HEMM_R(dcomplex, double, cd, itsme_zhemm)
+EIGEN_BLAS_HEMM_R(scomplex, float, cf, itsme_chemm)
 #endif
 } // end namespace internal
 
